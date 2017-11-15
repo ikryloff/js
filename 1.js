@@ -362,3 +362,15 @@ switch (num) {
         break;
 }
 alert(result);
+
+//Задачи
+// 16. В переменной day лежит какое-то число из интервала от 1 до 31.
+// Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+
+var day = 12;
+if(day <= 10)
+    alert('First decade!');
+else if(day >= 20)
+    alert('Third decade!');
+else
+    alert('Second decade!');
