@@ -668,3 +668,11 @@ for (var i = 0; i < arr.length; i++) {
 }
 res = Math.sqrt(res);
 alert(res);
+
+Работа с функциями округления
+6. Найдите квадратный корень из 379. Результат округлите до целых, до десятых,
+до сотых.
+
+document.write(Math.sqrt(379).toFixed(0));
+document.write(Math.sqrt(379).toFixed(1));
+document.write(Math.sqrt(379).toFixed(2));
