@@ -874,3 +874,161 @@ document.write(str);
 
 
 Задачи на функции работы с массивами в JavaScript
+Работа с concat
+
+1. Даны два массива: [1, 2, 3] и [4, 5, 6]. Объедините их вместе.
+
+var arr1 = [1, 2, 3];
+var arr2 = [4, 5, 6];
+
+arr1 = arr1.concat(arr2);
+document.write(arr1);
+
+Работа с reverse
+
+2. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1].
+var arr = [1, 2, 3];
+arr = arr.reverse();
+document.write(arr);
+
+Работа с push, unshift
+
+3. Дан массив [1, 2, 3]. Добавьте ему в конец элементы 4, 5, 6.
+
+var arr = [1, 2, 3];
+arr.push(4, 5, 6);
+document.write(arr);
+
+4. Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.
+
+var arr = [1, 2, 3];
+arr.unshift(4, 5, 6);
+document.write(arr);
+
+
+Работа с shift, pop
+
+5. Дан массив ['js', 'css', 'jq']. Выведите на экран первый элемент.
+
+var arr = ['js', 'css', 'jq'];
+var tmp = arr.shift();
+document.write(tmp);
+
+6. Дан массив ['js', 'css', 'jq']. Выведите на экран последний элемент.
+
+var arr = ['js', 'css', 'jq'];
+var tmp = arr.pop();
+document.write(tmp);
+
+Работа с slice
+
+7. 	Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [1, 2, 3].
+var arr = [1, 2, 3, 4, 5];
+var new_arr = arr.slice(0, 3);
+document.write(new_arr);
+
+8. Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [4, 5].
+
+var arr = [1, 2, 3, 4, 5];
+var new_arr = arr.slice(3);
+document.write(new_arr);
+
+
+Работа с splice
+
+9. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
+
+var arr = [1, 2, 3, 4, 5];
+arr.splice(1, 2);
+document.write(arr);
+
+10. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
+
+var arr = [1, 2, 3, 4, 5];
+var new_arr = arr.splice(1, 3);
+document.write(new_arr);
+
+11. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив
+[1, 2, 3, 'a', 'b', 'c', 4, 5].
+
+var arr = [1, 2, 3, 4, 5];
+arr.splice(3, 0, 'a', 'b', 'c');
+document.write(arr);
+
+12. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив
+[1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+
+var arr = [1, 2, 3, 4, 5];
+arr.splice(1, 0, 'a', 'b');
+arr.splice(6, 0, 'c');
+arr.splice(8, 0, 'e');
+document.write(arr);
+
+Работа с sort
+
+13. Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.
+
+var arr = [3, 4, 1, 2, 7];
+arr.sort();
+document.write(arr);
+
+Работа с Object.keys
+
+14. Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.
+
+var obj = {js:'test', jq: 'hello', css: 'world'};
+var okeys = Object.keys(obj);
+document.write(okeys);
+
+Отработка стандартных функций JavaScript
+
+1. Дана строка. Сделайте заглавным первый символ этой строки не используя цикл.
+Найдите два решения.
+
+var str = 'hello world';
+str = str.substr(0, 1).toUpperCase() + str.substr(1);
+document.write(str);
+
+var str = 'hello world';
+var arr = [];
+arr = str.split('');
+arr[0] = arr[0].toUpperCase();
+str = arr.join('');
+document.write(str);
+
+2. Дана строка, например, '123456'. Переверните эту строку
+(сделайте из нее '654321') не используя цикл.
+
+var str = '123456';
+var arr = [];
+arr = str.split('');
+arr = arr.reverse();
+str = arr.join('');
+document.write(str);
+
+3. Дано число, например, 3751. Отсортируйте цифры в нем
+(сделайте из него 1357) не используя цикл.
+var num = 3751;
+var str = String(num);
+var arr = [];
+arr = str.split('');
+arr.sort();
+str = arr.join('');
+num = Number(str);
+document.write(num);
+
+4.  Проверьте, что строка начинается на http://.
+var str = 'http://ya.ru'
+document.write(str.startsWith('http://'));
+
+var str = 'http://ya.ru'
+document.write(str.substr(0, 7)==('http://'));
+
+
+5. Проверьте, что строка заканчивается на .html
+
+var str = 'http://ya.html'
+document.write(str.endssWith('.html'));
+
+var str = 'http://ya.html'
+document.write(str.substr(-5)==('.html'));
