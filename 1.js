@@ -755,3 +755,10 @@ for (var i = 1; i <= num; i++) {
   fact *= i;
 }
 alert(fact);
+
+Работа с регистром символов
+1. Дана строка 'js'. Сделайте из нее строку 'JS'.
+
+var str = 'js';
+str = str.toUpperCase();
+alert(str);
