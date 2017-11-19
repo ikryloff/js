@@ -676,3 +676,12 @@ alert(res);
 document.write(Math.sqrt(379).toFixed(0));
 document.write(Math.sqrt(379).toFixed(1));
 document.write(Math.sqrt(379).toFixed(2));
+
+7. Найдите квадратный корень из 587. Округлите результат в большую и меньшую
+стороны, запишите результаты округления в объект с ключами 'floor' и 'ceil'.
+var obj = {};
+obj['floor'] = Math.floor(Math.sqrt(587));
+obj['ceil'] = Math.ceil(Math.sqrt(587));
+for (var key in obj) {
+    document.write(key + ':' + obj[key] + '<br>');
+}
