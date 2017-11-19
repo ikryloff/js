@@ -685,3 +685,27 @@ obj['ceil'] = Math.ceil(Math.sqrt(587));
 for (var key in obj) {
     document.write(key + ':' + obj[key] + '<br>');
 }
+
+Нахождение максимального и минимального числа
+
+8. Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число.
+
+document.write(Math.min(4, -2, 5, 19, -130, 0, 10));
+document.write('<br>');
+document.write(Math.max(4, -2, 5, 19, -130, 0, 10));
+
+Работа с рандомом
+
+9. Выведите на экран случайное целое число от 1 до 100.
+
+document.write(Math.floor(Math.random() * 100));
+
+10. Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно
+  воспользоваться циклами for или while).
+
+var arr = [];
+
+for (var i = 0; i < 10; i++) {
+  arr[i] = Math.floor(Math.random()*100);
+  document.write(arr[i] + '<br>');
+}
